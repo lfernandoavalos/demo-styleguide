@@ -1,0 +1,10 @@
+// Margin spacing
+@import '../../_Marvel/mixins/margin-spacing';
+
+.row {
+  @include margin-bottom(4);
+}
+
+.title-row {
+  @include margin-bottom(1);
+}

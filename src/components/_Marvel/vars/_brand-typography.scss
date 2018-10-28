@@ -1,0 +1,50 @@
+/***************************************************************
+ *  _____                                   _
+ * |_   _|  _ _ __  ___  __ _ _ _ __ _ _ __| |_ _  _
+ *   | || || | '_ \/ _ \/ _` | '_/ _` | '_ \ ' \ || |
+ *   |_| \_, | .__/\___/\__, |_| \__,_| .__/_||_\_, |
+ *       |__/|_|        |___/         |_|       |__/
+ ***************************************************************/
+
+/*********************************************************************************************************
+ * Typefaces
+ * Marvel's primary typeface is Fakt Soft Pro (We will replace with Open Sans) —
+ * a robust typeface with legible numbers that renders well at all sizes.
+ * It is soft and friendly, yet plain enough to get out of the way and let the user's designs shine.
+ *********************************************************************************************************/
+$typeface:                     'Open Sans', sans-serif;
+
+/*********************************************************************************************************
+ * Font sizes
+ * The font scale consists of 9 different font sizes. The default size applied to the body is Medium
+ * TODO: Handle ratios better
+ *********************************************************************************************************/
+$font-size-base-ratio:        1rem;
+$font-size-xxxx-large-ratio:  2.875;
+$font-size-xxx-large-ratio:   2.375;
+$font-size-xx-large-ratio:    1.75;
+$font-size-x-large-ratio:     1.25;
+$font-size-large-ratio:       1.125;
+$font-size-medium-ratio:      1;
+$font-size-small-ratio:       .875;
+$font-size-x-small-ratio:     .75;
+$font-size-xx-small-ratio:    .625;
+
+
+$font-size-xxxx-large:         $font-size-xxxx-large-ratio * $font-size-base-ratio; /* 48px */
+$font-size-xxx-large:          $font-size-xxx-large-ratio * $font-size-base-ratio; /* 36px */
+$font-size-xx-large:           $font-size-xx-large-ratio * $font-size-base-ratio; /* 28px */
+$font-size-x-large:            $font-size-x-large-ratio * $font-size-base-ratio; /* 20px */
+$font-size-large:              $font-size-large-ratio * $font-size-base-ratio; /* 18px */
+$font-size-medium:             $font-size-medium-ratio * $font-size-base-ratio; /* 16px */
+$font-size-small:              $font-size-small-ratio * $font-size-base-ratio; /* 14px */
+$font-size-x-small:            $font-size-x-small-ratio * $font-size-base-ratio; /* 12px */
+$font-size-xx-small:           $font-size-xx-small-ratio * $font-size-base-ratio; /* 10px */
+
+/*********************************************************************************************************
+ * Font weight
+ * There are three font weights available to use — Blond, Regular and Medium.
+ *********************************************************************************************************/
+ $font-weight-blond:           300;
+ $font-weight-regular:         400;
+ $font-weight-medium:          600;

@@ -1,0 +1,71 @@
+//
+// Padding Spacing
+//
+
+@import '../vars/spacing';
+
+//
+// Padding left by spacers key
+//
+// .example {
+//  @include padding-left(1);
+// }
+//
+// .example {
+//  padding-left: 4px;
+// }
+//
+@mixin padding-left($key) {
+  padding-left: map-get($spacers, $key);
+}
+
+//
+// Padding right by spacers key
+//
+// .example {
+//  @include padding-right(1);
+// }
+//
+// .example {
+//  padding-right: 4px;
+// }
+//
+@mixin padding-right($key) {
+  padding-right: map-get($spacers, $key);
+}
+
+//
+// Padding bottom by spacers key
+//
+// .example {
+//  @include padding-bottom(1);
+// }
+//
+// .example {
+//  padding-bottom: 4px;
+// }
+//
+@mixin padding-bottom($key) {
+  padding-bottom: map-get($spacers, $key);
+}
+
+//
+// Padding by spacers key
+//
+// .example {
+//  @include padding(1);
+// }
+//
+// .example {
+//  padding-top: 4px;
+//  padding-left: 4px;
+//  padding-bottom: 4px;
+//  padding-right: 4px;
+// }
+//
+@mixin padding($key) {
+  @include padding-top($key);
+  @include padding-left($key);
+  @include padding-bottom($key);
+  @include padding-right($key);
+}

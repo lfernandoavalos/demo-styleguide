@@ -1,0 +1,41 @@
+//
+// Typography SASS Variable Config
+//
+@import '../_Marvel/vars/brand-colors';
+@import '../_Marvel/vars/brand-typography';
+@import './reset.scss';
+
+
+$font-variations: (
+  xxxx: (
+    font-size: $font-size-xxxx-large,
+  ),
+  xxx: (
+    font-size: $font-size-xxx-large,
+  ),
+  xx: (
+    font-size: $font-size-xx-large,
+  ),
+  x: (
+    font-size: $font-size-x-large,
+  ),
+  l: (
+    font-size: $font-size-large,
+  ),
+  m: (
+    font-size: $font-size-medium,
+  ),
+  s: (
+    font-size: $font-size-small,
+  ),
+  xs: (
+    font-size: $font-size-x-small,
+  ),
+  xxs: (
+    font-size: $font-size-xx-small,
+  ),
+  caption: (
+    font-size: $font-size-small,
+    color: $brand-color-silver,
+  ),
+);

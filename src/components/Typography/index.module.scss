@@ -1,0 +1,22 @@
+//
+// Typography Styles
+//
+@import './config.scss';
+
+.marvel-typography {
+  font-family: $typeface;
+
+  //
+  // Loop through typography variations construct appropritate style
+  // i.e
+  // .marvel-typography-xxxx - 4x Size Font Size
+  //
+  @each $variation in map-keys($font-variations) {
+    &--#{$variation} {
+      @each $key, $value in map-get($font-variations, $variation) {
+        // Apply list css rules
+        #{$key}: $value;
+      }
+    }
+  }
+}

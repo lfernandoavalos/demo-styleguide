@@ -1,0 +1,30 @@
+//
+// Button Styles
+//
+@import './config';
+
+/****************
+ * Button Sizes
+ ****************/
+.marvel-button-size {
+  @each $size in map-keys($sizes) {
+    &--#{$size} {
+      $key: map-get($sizes, $size);
+      // Apply list css rules
+      @include padding-left($key);
+      @include padding-right($key);
+      min-height: get-space($key) * 2;
+    }
+  }
+}
+
+/****************
+ * Button Themes
+ ****************/
+.marvel-button {
+  /* Primary Button */
+  &--primary {
+    background-color: $primary-button-background-color;
+    color: $primary-button-color;
+  }
+}

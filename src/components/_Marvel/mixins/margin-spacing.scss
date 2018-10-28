@@ -1,0 +1,71 @@
+//
+// Margin Spacing
+//
+
+@import '../vars/spacing';
+
+//
+// Margin left by spacers key
+//
+// .example {
+//  @include margin-left(1);
+// }
+//
+// .example {
+//  margin-left: 4px;
+// }
+//
+@mixin margin-left($key) {
+  margin-left: map-get($spacers, $key);
+}
+
+//
+// Margin right by spacers key
+//
+// .example {
+//  @include margin-right(1);
+// }
+//
+// .example {
+//  margin-right: 4px;
+// }
+//
+@mixin margin-right($key) {
+  margin-right: map-get($spacers, $key);
+}
+
+//
+// Margin bottom by spacers key
+//
+// .example {
+//  @include margin-bottom(1);
+// }
+//
+// .example {
+//  margin-bottom: 4px;
+// }
+//
+@mixin margin-bottom($key) {
+  margin-bottom: map-get($spacers, $key);
+}
+
+//
+// Margin by spacers key
+//
+// .example {
+//  @include padding(1);
+// }
+//
+// .example {
+//  margin-top: 4px;
+//  margin-left: 4px;
+//  margin-bottom: 4px;
+//  margin-right: 4px;
+// }
+//
+@mixin padding($key) {
+  @include margin-top($key);
+  @include margin-left($key);
+  @include margin-bottom($key);
+  @include margin-right($key);
+}

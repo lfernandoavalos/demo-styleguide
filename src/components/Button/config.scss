@@ -1,0 +1,26 @@
+//
+// Button SCSS Variable Config
+//
+// configure sass variables used by button component
+//
+@import '../_Marvel/mixins/padding-spacing';
+@import '../_Marvel/mixins/spacing';
+@import '../_Marvel/vars/brand-colors';
+@import './reset';
+
+//
+// Primary Button Theme
+//
+$primary-button-background-color: $marvel-color;
+$primary-button-color: $palette-true-white;
+
+//
+// Button size variations
+//
+$sizes: (
+  xs: 3,
+  s: 4,
+  m: 5,
+  l: 6,
+  xl: 7,
+);

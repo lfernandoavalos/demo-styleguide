@@ -1,0 +1,18 @@
+//
+// Spacing
+//
+
+// Base spacing
+$spacer: 16px;
+
+$spacers: (
+  0: 0, // 0px
+  1: ($spacer * .25), // 4px
+  2: ($spacer * .5), // 8px
+  3: ($spacer * .75), // 12px
+  4: ($spacer * 1), // 16px
+  5: ($spacer * 1.25), // 20px
+  6: ($spacer * 1.5), // 24px
+  7: ($spacer * 1.75), // 28px
+  8: ($spacer * 2), // 32px
+);

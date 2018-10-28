@@ -1,0 +1,8 @@
+@import '../vars/spacing';
+
+//
+// Spacing
+//
+@function get-space($key) {
+  @return map-get($spacers, $key);
+}
