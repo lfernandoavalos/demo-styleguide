@@ -12,7 +12,7 @@ import capitalize
   from '../../packages/lib/string/capitalize';
 
 import style
-  from './index.module.scss';
+  from './style/index.module.scss';
 
 class Typography extends PureComponent {
   static propTypes = {

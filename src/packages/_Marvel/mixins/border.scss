@@ -1,0 +1,73 @@
+//
+// Border Radius
+//
+
+@import '../vars/border-radius';
+
+//
+// Border Radius
+//
+// .example {
+//  @include border-radius(1);
+// }
+//
+// .example {
+//  border-radius: 3px;
+// }
+//
+@mixin border-radius($key) {
+  border-radius: map-get($border-radius-list, $key);
+}
+
+//
+// Top Border Radius
+//
+// .example {
+//  @include border-radius-top(1);
+// }
+//
+// .example {
+//  border-top-right-radius: 3px;
+//  border-top-left-radius: 3px;
+// }
+//
+@mixin border-radius-top($key) {
+  border-top-right-radius: map-get($border-radius-list, $key);
+  border-top-left-radius: map-get($border-radius-list, $key);
+}
+
+//
+// Bottom Border Radius
+//
+// .example {
+//  @include border-radius-bottom(1);
+// }
+//
+// .example {
+//  border-bottom-right-radius: 3px;
+//  border-bottom-left-radius: 3px;
+// }
+//
+@mixin border-radius-bottom($key) {
+  border-bottom-right-radius: map-get($border-radius-list, $key);
+  border-bottom-left-radius: map-get($border-radius-list, $key);
+}
+
+//
+// Border
+//
+// .example {
+//  @include border(red);
+// }
+//
+// .example {
+//  border-width: 1px;
+//  border-style: solid;
+//  border-color: red;
+// }
+//
+@mixin border($color) {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color;
+}

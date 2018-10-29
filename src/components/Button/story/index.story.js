@@ -18,7 +18,7 @@ import {
 } from '@storybook/addon-info';
 
 import Button
-  from '.';
+  from '..';
 
 const PrimaryButtonStory = () => {
   const as = selectKnob('Variation', {

@@ -3,9 +3,11 @@
 //
 // configure sass variables used by button component
 //
-@import '../_Marvel/mixins/padding-spacing';
-@import '../_Marvel/mixins/spacing';
-@import '../_Marvel/vars/brand-colors';
+@import '../../../packages/_Marvel/mixins/padding-spacing';
+@import '../../../packages/_Marvel/mixins/padding-spacing';
+@import '../../../packages/_Marvel/mixins/get-spacing';
+@import '../../../packages/_Marvel/mixins/border';
+@import '../../../packages/_Marvel/vars/brand-colors';
 @import './reset';
 
 //

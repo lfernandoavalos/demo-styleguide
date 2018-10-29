@@ -11,11 +11,11 @@ import classnames
 import capitalize
   from '../../packages/lib/string/capitalize';
 
-import style
-  from './index.module.scss';
-
 import Typography
   from '../Typography';
+
+import style
+  from './style/index.module.scss';
 
 class Button extends PureComponent {
   static propTypes = {
@@ -58,10 +58,11 @@ class Button extends PureComponent {
     } = this.props;
 
     const classNamePrefix = (sufix = '') => `marvelButton${sufix}`;
-
+    console.log(style[classNamePrefix()]);
     return classnames(
       // Prop Class Name
       className,
+      style[classNamePrefix()],
       // Size Class Name - marvelButtonSizeM
       style[`${classNamePrefix('Size')}${capitalize(size)}`],
       // Theme Class Name - marvelButtonPrimary
