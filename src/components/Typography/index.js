@@ -31,7 +31,7 @@ class Typography extends PureComponent {
       'p',
     ]),
     /**
-     * Type of font
+     * Font variation
      * @type {[string]}
      */
     as: PropTypes.oneOf([

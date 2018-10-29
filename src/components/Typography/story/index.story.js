@@ -5,6 +5,9 @@ import React, {
 import map
   from 'lodash/map';
 
+import loremIpsum
+  from 'lorem-ipsum';
+
 import {
   storiesOf,
 } from '@storybook/react';
@@ -14,6 +17,10 @@ import {
   Row,
   Col,
 } from 'react-flexbox-grid';
+
+import {
+  withInfo,
+} from '@storybook/addon-info';
 
 import Typography
   from '..';
@@ -33,32 +40,36 @@ const sizes = {
   xxs: '10px — Extra extra small',
 };
 
+const TypographyStory = () => (
+  <Fragment>
+    <Grid>
+      {map(sizes, (caption, size) => (
+        <Row key={`row-${size}`} className={style.row}>
+          <Col md={12}>
+            <Row className={style.titleRow}>
+              <Col md={12}>
+                <Typography
+                  content="The quick brown fox jumps over the lazy dog"
+                  as={size}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={12}>
+                <Typography
+                  content={caption}
+                  as="caption"
+                />
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      ))}
+    </Grid>
+  </Fragment>
+);
+
 storiesOf('Typography', module)
-  .add('Typography', () => (
-    <Fragment>
-      <Grid>
-        {map(sizes, (caption, size) => (
-          <Row key={`row-${size}`} className={style.row}>
-            <Col md={12}>
-              <Row className={style.titleRow}>
-                <Col md={12}>
-                  <Typography
-                    content="The quick brown fox jumps over the lazy dog"
-                    as={size}
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Col md={12}>
-                  <Typography
-                    content={caption}
-                    as="caption"
-                  />
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        ))}
-      </Grid>
-    </Fragment>
-  ));
+  .add('Typography',
+    withInfo(loremIpsum({ count: 5 }))(TypographyStory)
+  );
