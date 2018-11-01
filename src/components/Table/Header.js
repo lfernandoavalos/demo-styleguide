@@ -26,6 +26,7 @@ class Header extends PureComponent {
      * @type {[string]}
      */
     as: PropTypes.oneOf([
+      // Numeric title indicates text align right
       'numeric',
     ]),
   };
