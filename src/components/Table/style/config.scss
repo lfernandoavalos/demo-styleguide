@@ -1,0 +1,20 @@
+//
+// Table SCSS var config
+//
+
+@import '../../../packages/_Marvel/mixins/padding-spacing';
+@import '../../../packages/_Marvel/mixins/padding-spacing';
+@import '../../../packages/_Marvel/mixins/get-spacing';
+@import '../../../packages/_Marvel/mixins/border';
+@import '../../../packages/_Marvel/vars/brand-colors';
+@import './reset';
+
+// Table Container SASS config
+$table-border-color: $brand-color-dark-snow;
+$table-background-color: $palette-true-white;
+
+// Table Row SASS config
+$table-row-border-color: $brand-color-dark-snow;
+
+// Table Header SASS config
+$table-header-color: $brand-color-slate;

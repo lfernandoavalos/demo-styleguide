@@ -1,0 +1,30 @@
+//
+// Table Style
+//
+@import './config';
+
+.table {
+  @include border-radius(1);
+  @include border($table-border-color);
+  width: 100%;
+  background-color: $table-background-color;
+}
+
+.header {
+  @include padding(3);
+  @include border-bottom($table-row-border-color);
+  color: $table-header-color;
+}
+
+.row {
+  &:last-child {
+    .content {
+      @include no-border();
+    }
+  }
+}
+
+.content {
+  @include padding(3);
+  @include border-bottom($table-row-border-color);
+}
