@@ -15,6 +15,12 @@ import {
   withInfo,
 } from '@storybook/addon-info';
 
+import {
+  withKnobs,
+  boolean as booleanKnob,
+} from '@storybook/addon-knobs';
+
+
 import Grid
   from '../../Grid';
 
@@ -29,40 +35,44 @@ const got = [{
   protein: 4.0,
 }];
 
-const TableStory = () => (
-  <Grid style={{ margin: 48 }}>
-    <Grid.Row>
-      <Grid.Col md={12}>
-          <Table>
-            <Table.Row>
-              <Table.Header content="Desserts (100g serving)" />
-              <Table.Header content="Calories" as="numeric" />
-              <Table.Header content="Fat (g)" as="numeric" />
-              <Table.Header content="Carbs (g)" as="numeric" />
-              <Table.Header content="Protein (g)" as="numeric" />
-            </Table.Row>
-            {map(got, ({
-              desserts,
-              calories,
-              fat,
-              carbs,
-              protein,
-            }, idx) => (
+const TableStory = () => {
+  const dense = booleanKnob('Dense', false);
+  return (
+    <Grid style={{ margin: 48 }}>
+      <Grid.Row>
+        <Grid.Col md={12}>
+            <Table dense={dense}>
               <Table.Row>
-                <Table.Content content={desserts} />
-                <Table.Content content={calories} />
-                <Table.Content content={fat} />
-                <Table.Content content={carbs} />
-                <Table.Content content={protein} />
+                <Table.Header content="Desserts (100g serving)" />
+                <Table.Header content="Calories" as="numeric" />
+                <Table.Header content="Fat (g)" as="numeric" />
+                <Table.Header content="Carbs (g)" as="numeric" />
+                <Table.Header content="Protein (g)" as="numeric" />
               </Table.Row>
-            ))}
-          </Table>
-      </Grid.Col>
-    </Grid.Row>
-  </Grid>
-);
+              {map(got, ({
+                desserts,
+                calories,
+                fat,
+                carbs,
+                protein,
+              }, idx) => (
+                <Table.Row>
+                  <Table.Content content={desserts} />
+                  <Table.Content content={calories} />
+                  <Table.Content content={fat} />
+                  <Table.Content content={carbs} />
+                  <Table.Content content={protein} />
+                </Table.Row>
+              ))}
+            </Table>
+        </Grid.Col>
+      </Grid.Row>
+    </Grid>
+  );
+}
 
 storiesOf('Table', module)
+  .addDecorator(withKnobs)
   .add('Table',
     withInfo(loremIpsum({ count: 5 }))(TableStory)
   );

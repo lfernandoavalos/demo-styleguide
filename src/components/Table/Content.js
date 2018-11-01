@@ -24,20 +24,29 @@ class Content extends PureComponent {
      * @type {string}
      */
     content: PropTypes.string,
+    /**
+     * Dense
+     * @type {string}
+     */
+    dense: PropTypes.bool,
   };
 
   static defaultProps = {
     content: undefined,
+    dense: false,
   };
 
   get classes() {
     const {
       className,
+      dense,
     } = this.props;
 
     return classnames(
       className,
-      style.content,
+      style.content, {
+        [style[`contentDense`]]: dense,
+      }
     );
   }
 
@@ -47,11 +56,11 @@ class Content extends PureComponent {
       className,
       children,
       content,
+      dense,
       ...otherProps
     } = this.props;
 
     const align = isNumber(content) ? 'right' : 'left';
-
     return (
       <td
         className={this.classes}

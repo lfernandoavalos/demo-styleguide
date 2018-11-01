@@ -29,20 +29,30 @@ class Header extends PureComponent {
       // Numeric title indicates text align right
       'numeric',
     ]),
+    /**
+     * Dense
+     * @type {string}
+     */
+    dense: PropTypes.bool,
   };
 
   static defaultProps = {
     content: undefined,
+    as: undefined,
+    dense: false,
   };
 
   get classes() {
     const {
       className,
+      dense,
     } = this.props;
 
     return classnames(
       className,
-      style.header,
+      style.header, {
+        [style[`headerDense`]]: dense,
+      }
     );
   }
 
@@ -53,6 +63,7 @@ class Header extends PureComponent {
       children,
       content,
       as,
+      dense,
       ...otherProps
     } = this.props;
 

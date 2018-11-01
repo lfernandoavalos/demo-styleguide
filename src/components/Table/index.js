@@ -2,6 +2,9 @@ import React, {
   PureComponent,
 } from 'react';
 
+import PropTypes
+  from 'prop-types';
+
 import classnames
   from 'classnames';
 
@@ -18,6 +21,18 @@ import Content
   from './Content';
 
 class Table extends PureComponent {
+  static propTypes = {
+    /**
+     * Dense
+     * @type {string}
+     */
+    dense: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    dense: false,
+  };
+
   get classes() {
     const {
       className,
@@ -34,6 +49,7 @@ class Table extends PureComponent {
     const {
       className,
       children,
+      dense,
       ...otherProps
     } = this.props;
 
@@ -42,7 +58,9 @@ class Table extends PureComponent {
         className={this.classes}
         {...otherProps}
       >
-        {children}
+        {React.Children.map(children, (ele, i) => (
+          React.cloneElement(ele, { dense })
+        ))}
       </table>
     );
   }

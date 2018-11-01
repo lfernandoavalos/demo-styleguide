@@ -14,6 +14,10 @@
   @include padding(3);
   @include border-bottom($table-row-border-color);
   color: $table-header-color;
+
+  &--dense {
+    @include padding(2);
+  }
 }
 
 .row {
@@ -27,4 +31,8 @@
 .content {
   @include padding(3);
   @include border-bottom($table-row-border-color);
+
+  &--dense {
+    @include padding(2);
+  }
 }

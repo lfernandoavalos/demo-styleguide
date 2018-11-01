@@ -2,6 +2,9 @@ import React, {
   PureComponent,
 } from 'react';
 
+import PropTypes
+  from 'prop-types';
+
 import classnames
   from 'classnames';
 
@@ -9,6 +12,18 @@ import style
   from './style/index.module.scss';
 
 class Row extends PureComponent {
+  static propTypes = {
+    /**
+     * Dense
+     * @type {string}
+     */
+    dense: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    dense: false,
+  };
+
   get classes() {
     const {
       className,
@@ -25,6 +40,7 @@ class Row extends PureComponent {
     const {
       className,
       children,
+      dense,
       ...otherProps
     } = this.props;
 
@@ -33,7 +49,9 @@ class Row extends PureComponent {
         className={this.classes}
         {...otherProps}
       >
-        {children}
+        {React.Children.map(children, (ele, i) => (
+          React.cloneElement(ele, { dense })
+        ))}
       </tr>
     );
   }
