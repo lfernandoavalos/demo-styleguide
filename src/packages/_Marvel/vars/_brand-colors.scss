@@ -8,7 +8,21 @@
 
 @import './colors';
 
-$light-marvel-color:    $palette-blue-050;
-$marvel-color:          $palette-blue-100;
-$dark-marvel-color:     $palette-blue-200;
-$brand-color-silver:    $palette-gray-050;
+// Marvel Brand Blue Colors
+$light-marvel-color:              $palette-blue-050;
+$marvel-color:                    $palette-blue-100;
+$dark-marvel-color:               $palette-blue-200;
+
+// Marvel Brand Gray Colors
+$brand-color-snow:                $palette-gray-050;
+$brand-color-dark-snow:           $palette-gray-100;
+$brand-color-extra-dark-snow:     $palette-gray-200;
+
+$brand-color-smoke:               $palette-gray-300;
+$brand-color-dark-smoke:          $palette-gray-400;
+$brand-color-extra-dark-smoke:    $palette-gray-500;
+
+$brand-color-silver:              $palette-gray-600;
+$brand-color-slate:               $palette-gray-700;
+
+$brand-color-black:               $palette-black-600;

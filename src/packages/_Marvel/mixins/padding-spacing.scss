@@ -50,6 +50,21 @@
 }
 
 //
+// Padding top by spacers key
+//
+// .example {
+//  @include padding-top(1);
+// }
+//
+// .example {
+//  padding-top: 4px;
+// }
+//
+@mixin padding-top($key) {
+  padding-top: map-get($spacers, $key);
+}
+
+//
 // Padding by spacers key
 //
 // .example {
@@ -68,4 +83,40 @@
   @include padding-left($key);
   @include padding-bottom($key);
   @include padding-right($key);
+}
+
+
+//
+// Padding vertical
+//
+// .example {
+//  @include padding-y(1);
+// }
+//
+// .example {
+//  padding-top: 4px;
+//  padding-bottom: 4px;
+// }
+//
+@mixin padding-y($key) {
+  @include padding-top($key);
+  @include padding-bottom($key);
+}
+
+
+//
+// Padding horizontal
+//
+// .example {
+//  @include padding-x(1);
+// }
+//
+// .example {
+//  padding-left: 4px;
+//  padding-right: 4px;
+// }
+//
+@mixin padding-x($key) {
+  @include padding-right($key);
+  @include padding-left($key);
 }

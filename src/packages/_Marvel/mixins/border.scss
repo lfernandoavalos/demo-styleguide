@@ -71,3 +71,38 @@
   border-style: solid;
   border-color: $color;
 }
+
+//
+// Border bottom
+//
+// .example {
+//  @include border-bottom(red);
+// }
+//
+// .example {
+//  border-bottom-width: 1px;
+//  border-bottom-style: solid;
+//  border-bottom-color: red;
+// }
+//
+@mixin border-bottom($color) {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $color;
+}
+
+
+//
+// No Border
+//
+// .example {
+//  @include no-border();
+// }
+//
+// .example {
+//  border: 0;
+// }
+//
+@mixin no-border() {
+  border: 0;
+}
