@@ -58,7 +58,7 @@ class Button extends PureComponent {
     } = this.props;
 
     const classNamePrefix = (sufix = '') => `marvelButton${sufix}`;
-    console.log(style[classNamePrefix()]);
+
     return classnames(
       // Prop Class Name
       className,

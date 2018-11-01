@@ -80,7 +80,7 @@ class Typography extends PureComponent {
      * @return {string}
      */
     const classNamePrefix = (sufix = '') => `marvelTypography${capitalize(sufix)}`;
-    console.log(`${classNamePrefix('Align')}${capitalize(align)}`);
+
     return classnames(
       className,
       // Base typography class name
