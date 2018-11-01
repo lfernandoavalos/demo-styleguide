@@ -46,17 +46,28 @@ class Typography extends PureComponent {
       'xxs',
       'caption',
     ]),
+    /**
+     * Text alignment
+     * @type {[string]}
+     */
+    align: PropTypes.oneOf([
+      'left',
+      'center',
+      'right'
+    ]),
   };
 
   static defaultProps = {
     content: undefined,
     tag: 'p',
     as: 'm',
+    align: 'left',
   };
 
   get classes() {
     const {
       className,
+      align,
       as,
     } = this.props;
 
@@ -69,13 +80,15 @@ class Typography extends PureComponent {
      * @return {string}
      */
     const classNamePrefix = (sufix = '') => `marvelTypography${capitalize(sufix)}`;
-
+    console.log(`${classNamePrefix('Align')}${capitalize(align)}`);
     return classnames(
       className,
       // Base typography class name
       style[classNamePrefix()],
       // Class name based on typography variation - For now size
       style[`${classNamePrefix()}${capitalize(as)}`],
+      // Class name for text alignment
+      style[`${classNamePrefix('Align')}${capitalize(align)}`],
     );
   }
 
@@ -87,6 +100,7 @@ class Typography extends PureComponent {
       className,
       tag: Tag,
       as,
+      align,
       ...otherPros
     } = this.props;
 

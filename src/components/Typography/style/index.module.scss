@@ -20,3 +20,19 @@
     }
   }
 }
+
+.marvel-typography-align {
+  //
+  // Loop through typography text aligment
+  // i.e
+  // .marvel-typography-left - text align left
+  //
+  @each $aligment in map-keys($text-aligments) {
+    &--#{$aligment} {
+      @each $key, $value in map-get($text-aligments, $aligment) {
+        // Apply list css rules
+        #{$key}: $value;
+      }
+    }
+  }
+}

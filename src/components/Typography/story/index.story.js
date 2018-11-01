@@ -13,14 +13,11 @@ import {
 } from '@storybook/react';
 
 import {
-  Grid,
-  Row,
-  Col,
-} from 'react-flexbox-grid';
-
-import {
   withInfo,
 } from '@storybook/addon-info';
+
+import Grid
+  from '../../Grid';
 
 import Typography
   from '..';
@@ -44,26 +41,26 @@ const TypographyStory = () => (
   <Fragment>
     <Grid>
       {map(sizes, (caption, size) => (
-        <Row key={`row-${size}`} className={style.row}>
-          <Col md={12}>
-            <Row className={style.titleRow}>
-              <Col md={12}>
+        <Grid.Row key={`row-${size}`} className={style.row}>
+          <Grid.Col md={12}>
+            <Grid.Row className={style.titleRow}>
+              <Grid.Col md={12}>
                 <Typography
                   content="The quick brown fox jumps over the lazy dog"
                   as={size}
                 />
-              </Col>
-            </Row>
-            <Row>
-              <Col md={12}>
+              </Grid.Col>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Col md={12}>
                 <Typography
                   content={caption}
                   as="caption"
                 />
-              </Col>
-            </Row>
-          </Col>
-        </Row>
+              </Grid.Col>
+            </Grid.Row>
+          </Grid.Col>
+        </Grid.Row>
       ))}
     </Grid>
   </Fragment>
